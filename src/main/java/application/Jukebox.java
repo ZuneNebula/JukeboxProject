@@ -16,19 +16,10 @@ public class Jukebox {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args){
-        try{
-            new Jukebox().musicService();
-        }
-        catch (InputMismatchException e){
-            System.out.println(e.getMessage());
-        }
-        catch (NumberFormatException e){
-            System.out.println(e.getMessage());
-        }
-
+        new Jukebox().musicService();
     }
 
-    public void musicService() throws NumberFormatException,InputMismatchException{
+    public void musicService() {
         int userChoice = 0;
         do{
            System.out.println("Main Menu");
@@ -36,14 +27,22 @@ public class Jukebox {
            System.out.println("2: Listen to podcasts");
            System.out.println("3: Listen to playlists");
            System.out.println("4: Quit");
-           userChoice = Integer.parseInt(sc.nextLine());
+            try{
+                userChoice = Integer.parseInt(sc.nextLine());
+                switch(userChoice){
+                    case 1:songService();break;
+                    case 2: podcastService();break;
+                    case 3: playlistService();break;
+                    default:break;
+                }
+            }
+            catch (InputMismatchException e){
+                System.out.println("InputMismatchException "+e.getMessage());
+            }
+            catch (NumberFormatException e){
+                System.out.println("NumberformatException "+e.getMessage());
+            }
 
-           switch(userChoice){
-               case 1:songService();break;
-               case 2: podcastService();break;
-               case 3: playlistService();break;
-               default:break;
-           }
         }while(userChoice!=4);
     }
 
