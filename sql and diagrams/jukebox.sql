@@ -90,6 +90,7 @@ insert into playlistentry values(default,'Sunset Dream', 'Cheel', '0:2:42','Podc
 insert into playlistentry values(default,'Know Myself', 'Patrick Patrikios', '0:3:23','Podcast');
 insert into playlistentry values(default,'New Day', 'Patrick Patrikios', '0:2:15','Podcast');
 insert into playlistentry values(default,'Blank Slate', 'VYEN', '0:1:59','Podcast');
+insert into playlistentry values(default,'Cruise','John Delay','0:0:06','Podcast');
 
 insert into songs values(default,1,'Bb','Hip Hop');
 insert into songs values(default,2,'Bb','Hip Hop');
@@ -104,6 +105,7 @@ insert into podcasts values(default,8,'2020-12-5');
 insert into podcasts values(default,9,'2021-6-20');
 insert into podcasts values(default,10,'2021-5-3');
 insert into podcasts values(default,11,'2020-8-20');
+insert into podcasts values(default,12,'2021-08-27');
 select * from podcasts;
 
 insert into users values(default,'mihir');
@@ -147,4 +149,7 @@ select * from playlist where name = 'dawn';
 
 select * from playlistentry;
 
-select * from songs
+select * from songs;
+
+select * from playlist;
+

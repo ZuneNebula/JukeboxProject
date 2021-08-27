@@ -182,7 +182,7 @@ public class Jukebox {
                         }
                     }while(entryChoice!=3);
                 default:
-                    break;
+                 break;
             }
         }while(userChoice!=4);
     }
