@@ -24,7 +24,7 @@ public class AudioService {
             }
             play(entry.getName());
             System.out.println("List controls");
-            System.out.println("P: Previous, N: Next, S: Shuffle, Q: Quit");
+            System.out.println("P: Previous, C: Continue, N: Next, S: Shuffle, Q: Quit");
             String userChoice = sc.nextLine().toUpperCase();
             switch (userChoice){
                 case "P":
